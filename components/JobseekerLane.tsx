@@ -50,7 +50,7 @@ export default function JobseekerLane({ jobseeker, onApprove, onOverride }: Jobs
   }, [jobseeker.timeline.length])
 
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '178px 1fr', borderTop: '1px solid var(--border)' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: '178px 1fr' }}>
 
       {/* Identity column — left edge aligns with stats card (paddingLeft on section = 32px) */}
       <div style={{ padding: '24px 16px 32px 0', display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -73,11 +73,6 @@ export default function JobseekerLane({ jobseeker, onApprove, onOverride }: Jobs
       >
         <div style={{ position: 'relative', display: 'inline-flex', minWidth: '100%' }}>
 
-          {/* Hairline through dot centres */}
-          <div style={{
-            position: 'absolute', top: 5, left: 0, right: 0,
-            height: 1, background: 'var(--border)',
-          }} />
 
           <div style={{ display: 'flex', alignItems: 'stretch', gap: 24, position: 'relative' }}>
 

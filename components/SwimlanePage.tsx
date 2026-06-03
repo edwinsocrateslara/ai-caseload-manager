@@ -375,7 +375,15 @@ export default function SwimlanePage() {
 
       {/* ── Jobseeker rows ── */}
       {data && !loading && (
-        <section style={{ margin: '30px 0 56px', paddingLeft: 32 }}>
+        <section style={{
+          margin: '30px 0 56px', paddingLeft: 32,
+          backgroundImage: [
+            'linear-gradient(var(--border) 1px, transparent 1px)',
+            'linear-gradient(90deg, var(--border) 1px, transparent 1px)',
+          ].join(', '),
+          backgroundSize: '46px 46px',
+          backgroundPosition: 'center',
+        }}>
           {data.jobseekers.map((js) => (
             <JobseekerLane
               key={js.id}

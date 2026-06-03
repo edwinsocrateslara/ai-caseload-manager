@@ -87,7 +87,7 @@ export default function TimelineNode({ event, onApprove, onOverride }: TimelineN
       {/* Card — fixed height so all cards in a row are equal */}
       <div style={{
         height: 168, padding: 16,
-        background: isUpcoming ? 'transparent' : 'var(--card)',
+        background: isUpcoming ? 'var(--background)' : 'var(--card)',
         border: `1px ${isUpcoming ? 'dashed' : 'solid'} ${isPending
           ? 'color-mix(in oklab, var(--destructive) 45%, transparent)'
           : 'var(--border)'}`,
