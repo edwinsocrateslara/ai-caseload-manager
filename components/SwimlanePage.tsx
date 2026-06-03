@@ -289,6 +289,7 @@ export default function SwimlanePage() {
 
       {/* ── Stats strip — DS: bg-card border border-border rounded-2xl shadow-sm ── */}
       {data && (
+        <>
         <section style={{
           display: 'grid',
           gridTemplateColumns: 'minmax(360px,1fr) minmax(360px,1fr) minmax(320px,1fr)',
@@ -355,6 +356,23 @@ export default function SwimlanePage() {
             </div>
           </div>
         </section>
+
+        {/* ── Priority legend ── */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 24, margin: '16px 32px 0' }}>
+          {([
+            ['Critical', '--destructive'],
+            ['High',     '--chart-3'],
+            ['Low',      '--chart-2'],
+          ] as const).map(([label, token]) => (
+            <div key={label} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+              <span style={{ width: 8, height: 8, borderRadius: 999, flexShrink: 0, background: `var(${token})` }} />
+              <span style={{ fontSize: 'var(--text-xxs)', fontWeight: 500, color: 'var(--muted-foreground)' }}>
+                {label}
+              </span>
+            </div>
+          ))}
+        </div>
+        </>
       )}
 
       {/* ── Loading / error ── */}
