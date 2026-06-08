@@ -119,7 +119,7 @@ export default function JobseekerLane({ jobseeker, onApprove, onOverride }: Jobs
                       : null
                   }
                   onOverride={
-                    event.type === 'agent_action' && event.state !== 'skipped' && event.agentAction
+                    event.type === 'agent_action' && event.state === 'pending' && event.agentAction
                       ? () => onOverride(event.agentAction!.id)
                       : null
                   }
@@ -148,7 +148,7 @@ export default function JobseekerLane({ jobseeker, onApprove, onOverride }: Jobs
                   event={event}
                   onApprove={null}
                   onOverride={
-                    event.type === 'agent_action' && event.state !== 'skipped' && event.agentAction
+                    event.type === 'agent_action' && event.state === 'pending' && event.agentAction
                       ? () => onOverride(event.agentAction!.id)
                       : null
                   }
