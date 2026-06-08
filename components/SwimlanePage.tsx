@@ -346,7 +346,7 @@ export default function SwimlanePage() {
             </div>
             <div style={{
               fontSize: 40, fontWeight: 700, lineHeight: 1.1, marginTop: 8,
-              color: escalatedEvents.length > 0 ? 'var(--destructive)' : 'var(--chart-2)',
+              color: 'var(--foreground)',
               fontFamily: 'var(--font-mono)',
             }}>
               {escalatedEvents.length}
